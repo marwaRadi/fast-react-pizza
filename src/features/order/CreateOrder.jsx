@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import { Form, redirect, useActionData, useNavigation } from "react-router-dom";
 import { createOrder } from "../../services/apiRestaurant";
-import { OrderInput } from "../../components/input";
+import { OrderInput } from "../../components/Input";
 import { Button } from "../../components/buttons";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, getCart } from "../cart/cartSlice";
@@ -47,7 +47,7 @@ function CreateOrder() {
   const {
     userName: activeUser,
     address: userAddress,
-    position: userPosition,
+    // position: userPosition,
     status: addressStatus,
   } = useSelector(getUser);
   // const [withPriority, setWithPriority] = useState(false);
@@ -60,7 +60,9 @@ function CreateOrder() {
 
   return (
     <div className="px-4 py-6">
-      <h2 className="mb-8 text-xl font-semibold ">Ready to order? Let's go!</h2>
+      <h2 className="mb-8 text-xl font-semibold ">
+        Ready to order? Let&apos;s go!
+      </h2>
 
       <Form method="POST">
         <div className="flex justify-between items-center mb-4 ">
