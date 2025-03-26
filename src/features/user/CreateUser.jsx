@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Input from "../../components/input";
+import Input from "../../components/Input";
 import { Button } from "../../components/buttons";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setUserName } from "./userSlice";
-import { useNavigate, useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function CreateUser() {
   const [username, setUsername] = useState("");
   const dispatch = useDispatch();
